@@ -3920,7 +3920,13 @@ export class HouseplanCard extends LitElement {
     return 12;
   }
 
-  public getGridOptions(): { columns: 'full' } { return { columns: 'full' }; }
+  public getGridOptions(): { rows: number; columns: 'full'; min_rows: number } {
+  return {
+    rows: 6,
+    columns: 'full',
+    min_rows: 4,
+  };
+}
 
   // ================= MODEL RESOLUTION (server configuration) =================
 
